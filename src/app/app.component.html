@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+
+  <div class="navbar-fixed">
+    <nav class="white">
+      <div class="nav-wrapper">
+        <ul class="left">
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink= "/"><i class="fa fa-reddit-alien" aria-hidden="true"></i> /r/analog</a></li>
+          <li routerLinkActive="active"><a routerLink= "/favorite" ><i class="fa fa-heart" aria-hidden="true"></i> favorite {{count}}</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <router-outlet></router-outlet>

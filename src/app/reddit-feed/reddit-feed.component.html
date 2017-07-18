@@ -1,0 +1,17 @@
+
+<div class="row" *ngFor="let reddit of reddits">
+  <div class="col s12 m6 offset-m3 centered">
+    <div class="card">
+      <div #cardimage class="card-image" *ngIf="reddit.data.thumbnail" (mouseover)="onHover(reddit.data.id)" (mouseleave)="onMouseLeave(reddit.data.id)" (click)="onClick(reddit.data.id, reddit)">
+        <img  class="image" src="{{reddit.data.thumbnail}}">
+        <i class="fa fa-heart hidden" id="{{reddit.data.id}}" aria-hidden="true" #hearticon ></i>
+      </div>
+      <div class="card-content">
+        <p>{{reddit.data.title}}.</p>
+      </div>
+      <div class="card-action">
+        <p><i class="fa fa-user" aria-hidden="true"></i> {{reddit.data.author}}. <i class="fa fa-clock-o" aria-hidden="true"></i> {{getDate(reddit.data.created_utc)}} ago. <i class="fa fa-bolt" aria-hidden="true"></i> {{reddit.data.num_comments}}</p>
+      </div>
+    </div>
+  </div>
+</div>

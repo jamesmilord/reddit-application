@@ -1,0 +1,21 @@
+li {
+  display: inline-block;
+
+}
+
+.container{
+  padding-top: 50px;
+}
+
+nav ul li a{
+  color: #57a2e4;
+}
+
+nav ul li.active {
+  
+    color: white;
+  }
+
+nav ul li a.active{
+  color: white;
+}
