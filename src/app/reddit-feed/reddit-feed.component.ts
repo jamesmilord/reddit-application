@@ -35,7 +35,7 @@ export class RedditFeedComponent implements OnInit {
   getreddits(subrerdit, limit){
     this.redditservice.fetchposts(subrerdit, limit).subscribe(res=>{
       this.reddits = res.data.children;
-      console.log(this.reddits);
+  
     });
   }
 
@@ -97,7 +97,6 @@ export class RedditFeedComponent implements OnInit {
       $("#"+id+"").addClass('favorite');
       $("#"+id+"").addClass('animated bounceInLeft');
       this.redditservice.addToFavorites(reddit);
-      console.log(this.redditservice.getFavoritesCount())
      }
 
 

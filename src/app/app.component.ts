@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
 
   constructor(private redditService: RedditService, private router: Router) {
     this.count = this.redditService.getFavoritesCount();
-    console.log(this.count);
+
 }
 
 ngOnInit() {
